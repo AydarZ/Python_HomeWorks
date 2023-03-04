@@ -7,12 +7,10 @@
 def input_number(text: str) -> int:
     return int(input(f'Введите {text}: '))
 
-
-def summ_rec(a: int, b: int, i=-1) -> int:
-    if i == b:
+def summ_rec(a: int, b:int) -> int:
+    if a == 0:
         return b
-    else:
-        return a + summ_rec(0, b, i+1)
+    return summ_rec(a-1, b+1)
 
 
 a = input_number('A')
